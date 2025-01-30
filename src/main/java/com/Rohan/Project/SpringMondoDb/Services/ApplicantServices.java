@@ -18,5 +18,11 @@ public class ApplicantServices {
 	  return appRepo.findAll();
 	 }
 	 
+	public Applicant addNewApplicant(Applicant a)
+ 	{
+ 	 	Calendar cal=Calendar.getInstance();
+  		a.setApplydate(cal.getTime().toString());
+  		return apprepo.save(a);
+	}
 	 
 }

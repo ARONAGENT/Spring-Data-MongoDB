@@ -22,4 +22,10 @@ public class ApplicantController {
 	 return appServ.getAllApplicants();	
 	}
 
+	@PostMapping("/addapp")
+ 	public Applicant addApp(@RequestBody Applicant a)
+ 	{
+  	return appserv.addNewApplicant(a);
+ 	}
+
 }
